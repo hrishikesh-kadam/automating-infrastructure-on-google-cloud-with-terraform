@@ -16,3 +16,8 @@ provider "google" {
 module "instances" {
   source = "./modules/instances"
 }
+
+module "storage" {
+  source         = "./modules/storage"
+  tf_bucket_name = var.tf_bucket_name
+}

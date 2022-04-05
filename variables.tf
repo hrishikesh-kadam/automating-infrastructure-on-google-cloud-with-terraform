@@ -15,3 +15,9 @@ variable "project_id" {
   type        = string
   default     = "qwiklabs-gcp-01-2ce18408c671"
 }
+
+variable "tf_bucket_name" {
+  description = "TF Bucket Name"
+  type        = string
+  default     = "tf-bucket-44528"
+}
