@@ -1,3 +1,6 @@
 # Task 2
 terraform import module.instances.google_compute_instance.tf-instance-1 <id>
 terraform import module.instances.google_compute_instance.tf-instance-2 <id>
+
+# Task 3b
+terraform init -backend-config=backend.conf

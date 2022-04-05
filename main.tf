@@ -21,3 +21,9 @@ module "storage" {
   source         = "./modules/storage"
   tf_bucket_name = var.tf_bucket_name
 }
+
+terraform {
+  backend "gcs" {
+    prefix = "terraform/state"
+  }
+}
