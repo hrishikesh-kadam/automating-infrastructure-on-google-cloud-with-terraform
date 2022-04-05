@@ -21,3 +21,9 @@ variable "tf_bucket_name" {
   type        = string
   default     = "tf-bucket-44528"
 }
+
+variable "instance_machine_type" {
+  description = "Instance Machine Type"
+  type        = string
+  default     = "n1-standard-2"
+}

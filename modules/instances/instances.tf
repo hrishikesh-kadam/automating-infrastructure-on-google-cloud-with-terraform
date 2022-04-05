@@ -39,3 +39,18 @@ resource "google_compute_instance" "tf-instance-2" {
   }
   allow_stopping_for_update = true
 }
+
+resource "google_compute_instance" "tf-instance-3" {
+  name         = "tf-instance-291469"
+  machine_type = var.instance_machine_type
+  boot_disk {
+    initialize_params {
+      image = var.instance_boot_image
+    }
+  }
+  network_interface {
+    network = var.network_name
+    access_config {
+    }
+  }
+}

@@ -14,7 +14,8 @@ provider "google" {
 }
 
 module "instances" {
-  source = "./modules/instances"
+  source                = "./modules/instances"
+  instance_machine_type = var.instance_machine_type
 }
 
 module "storage" {
