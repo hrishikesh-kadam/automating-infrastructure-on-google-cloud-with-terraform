@@ -15,3 +15,21 @@ variable "project_id" {
   type        = string
   default     = "qwiklabs-gcp-01-2ce18408c671"
 }
+
+variable "instance_machine_type" {
+  description = "Instance Machine Type"
+  type        = string
+  default     = "n1-standard-1"
+}
+
+variable "instance_boot_image" {
+  description = "Instance Boot Image"
+  type        = string
+  default     = "debian-cloud/debian-10"
+}
+
+variable "network_name" {
+  description = "Network Name"
+  type        = string
+  default     = "default"
+}
