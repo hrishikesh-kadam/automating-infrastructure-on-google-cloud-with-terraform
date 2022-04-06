@@ -7,7 +7,8 @@ resource "google_compute_instance" "tf-instance-1" {
     }
   }
   network_interface {
-    network = var.network_name
+    network    = var.network_name
+    subnetwork = var.subnet_01_name
     access_config {
     }
   }
@@ -28,7 +29,8 @@ resource "google_compute_instance" "tf-instance-2" {
     }
   }
   network_interface {
-    network = var.network_name
+    network    = var.network_name
+    subnetwork = var.subnet_02_name
     access_config {
     }
   }

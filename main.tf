@@ -16,6 +16,9 @@ provider "google" {
 module "instances" {
   source                = "./modules/instances"
   instance_machine_type = var.instance_machine_type
+  network_name          = var.network_name
+  subnet_01_name        = var.subnet_01_name
+  subnet_02_name        = var.subnet_02_name
 }
 
 module "storage" {
@@ -26,16 +29,16 @@ module "storage" {
 module "tf-vpc" {
   source       = "terraform-google-modules/network/google"
   version      = "3.4.0"
-  network_name = "tf-vpc-987869"
+  network_name = var.network_name
   project_id   = var.project_id
   subnets = [
     {
-      subnet_name   = "subnet-01"
+      subnet_name   = var.subnet_01_name
       subnet_ip     = "10.10.10.0/24"
       subnet_region = var.region
     },
     {
-      subnet_name   = "subnet-02"
+      subnet_name   = var.subnet_02_name
       subnet_ip     = "10.10.20.0/24"
       subnet_region = var.region
     }

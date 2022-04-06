@@ -27,3 +27,21 @@ variable "instance_machine_type" {
   type        = string
   default     = "n1-standard-2"
 }
+
+variable "network_name" {
+  description = "Network Name"
+  type        = string
+  default     = "tf-vpc-987869"
+}
+
+variable "subnet_01_name" {
+  description = "Subnet 01 Name"
+  type        = string
+  default     = "subnet-01"
+}
+
+variable "subnet_02_name" {
+  description = "Subnet 02 Name"
+  type        = string
+  default     = "subnet-02"
+}

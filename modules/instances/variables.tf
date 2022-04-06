@@ -33,3 +33,15 @@ variable "network_name" {
   type        = string
   default     = "default"
 }
+
+variable "subnet_01_name" {
+  description = "Subnet 01 Name"
+  type        = string
+  default     = "default"
+}
+
+variable "subnet_02_name" {
+  description = "Subnet 02 Name"
+  type        = string
+  default     = "default"
+}
