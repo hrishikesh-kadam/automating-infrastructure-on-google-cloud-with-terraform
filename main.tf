@@ -45,6 +45,16 @@ module "tf-vpc" {
   ]
 }
 
+resource "google_compute_firewall" "tf-firewall" {
+  name    = "tf-firewall"
+  network = var.network_name
+  allow {
+    protocol = "tcp"
+    ports    = ["80"]
+  }
+  source_ranges = ["0.0.0.0/0"]
+}
+
 terraform {
   backend "gcs" {
     prefix = "terraform/state"
